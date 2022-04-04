@@ -1,0 +1,17 @@
+{
+	"name": "com.pum4ch3n.power-editor", 
+	"version": "0.1.0", 
+	"displayName": "Power Editor", 
+	"description": "Power Editor", 
+	"unity": "2018.1", 
+	"documentationUrl": "", 
+	"changelogUrl": "", 
+	"licenseUrl": "", 
+	"dependencies": {},
+	"keywords": [], 
+	"author": {
+		"name": "PUM4CH3N", 
+		"email": "", 
+		"url": ""
+	}
+}
