@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
-namespace PowerEditor.AssetImporters
+namespace PowerEditor.AssetManagement
 {
     [CustomPropertyDrawer(typeof(AssetReference), true)]
     public class AssetReferenceDrawer : PropertyDrawer
@@ -15,7 +15,7 @@ namespace PowerEditor.AssetImporters
             EditorGUI.BeginProperty(position, new GUIContent(property.name), property);
             Type type = Type.GetType(property.FindPropertyRelative("type").stringValue);
             string path = property.FindPropertyRelative("assetPath").stringValue;
-            Object obj = EditorGUI.ObjectField(position, label, AssetDatabase.LoadAssetAtPath<Object>(path), type);
+            Object obj = EditorGUI.ObjectField(position, label, AssetDatabase.LoadAssetAtPath<Object>(path), type, false);
             property.FindPropertyRelative("assetPath").stringValue = AssetDatabase.GetAssetPath(obj);
             EditorGUI.EndProperty();
         }

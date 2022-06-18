@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 using UnityEngine;
 using UnityEditor;
 
-namespace PowerEditor
+namespace PowerEditor.AssetManagement
 {
     public static class MetaUtils
     {

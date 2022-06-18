@@ -8,7 +8,7 @@ using UnityEditor;
 using UnityEditor.AssetImporters;
 using Object = UnityEngine.Object;
 
-namespace PowerEditor.AssetImporters
+namespace PowerEditor.AssetManagement
 {
 	[CustomEditor(typeof(CompositeAssetImporter))]
 	[CanEditMultipleObjects]

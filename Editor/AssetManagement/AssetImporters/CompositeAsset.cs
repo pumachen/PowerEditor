@@ -8,7 +8,7 @@ using UnityEditor;
 using UnityEditor.AssetImporters;
 using Object = UnityEngine.Object;
 
-namespace PowerEditor.AssetImporters
+namespace PowerEditor.AssetManagement
 {
 	public abstract class CompositeAsset : ScriptableObject
 	{

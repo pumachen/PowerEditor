@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Experimental.Rendering;
 using UnityEngine.Rendering;
 
-namespace PowerEditor
+namespace PowerEditor.Graphics
 {
 	public static class Textureutils
 	{

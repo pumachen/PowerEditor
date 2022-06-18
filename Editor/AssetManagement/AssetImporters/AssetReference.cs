@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEditor;
 using Object = UnityEngine.Object;
 
-namespace PowerEditor.AssetImporters
+namespace PowerEditor.AssetManagement
 {
 	[Serializable]
 	public abstract class AssetReference

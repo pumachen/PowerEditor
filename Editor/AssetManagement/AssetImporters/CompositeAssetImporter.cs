@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEditor.AssetImporters;
-using CompositeResult = PowerEditor.AssetImporters.CompositeAsset.CompositeResult;
+using CompositeResult = PowerEditor.AssetManagement.CompositeAsset.CompositeResult;
 
-namespace PowerEditor.AssetImporters
+namespace PowerEditor.AssetManagement
 {
 	[ScriptedImporter(0, ".comp")]
 	public class CompositeAssetImporter : ScriptedImporter
@@ -35,11 +35,11 @@ namespace PowerEditor.AssetImporters
 			}
 
 			Type type = compositeAsset.GetType();
-			IEnumerable<CompositeResult> compositeResults = 
+			IEnumerable<CompositeAsset.CompositeResult> compositeResults = 
 				type.GetMethod("Composite")
-					.Invoke(compositeAsset, new object[] {this, ctx}) as IEnumerable<CompositeResult>;
+					.Invoke(compositeAsset, new object[] {this, ctx}) as IEnumerable<CompositeAsset.CompositeResult>;
 			compositeAsset.compositeResults = compositeResults.ToArray();
-			foreach (CompositeResult result in compositeAsset.compositeResults)
+			foreach (CompositeAsset.CompositeResult result in compositeAsset.compositeResults)
 			{
 				ctx.AddObjectToAsset(result.identifier, result.obj);
 			}
